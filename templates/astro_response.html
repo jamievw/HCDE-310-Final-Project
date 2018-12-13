@@ -1,0 +1,16 @@
+<html>
+<head>
+	<svg width="1000" height="10">
+  <rect width="1000" height="20" style="fill:rgb(255, 230, 230)"/>
+<title>{{vals.page_title}}</title>
+</head>
+<body>
+<body style="background-color:rgb(255, 255, 230);">
+<h1 style="font-family: Trebuchet MS"> Learn Your Astrological Signs!</h1>
+<p2 style="font-family: Open Sans"> Your Birthday: {{vals.month}}/{{vals.day}}/{{vals.year}}<br><br></p2>
+<p3 style="font-family: Open Sans"> From your birthday data, your Astrological Information is as follows:<br></p3>
+<p4 style="font-family: Open Sans"> {% for value in vals.astro_info %} </p4>
+	<div style="font-family: Open Sans" class ='info'>Your {{vals.astro_info[value].phrase}} is the: {{vals.astro_info[value].result}}</div>
+<p5 style="font-family: Open Sans"> {% endfor %} </p5>
+</body>
+</html>
